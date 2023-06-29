@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const port = 5000;
-
+ 
 
 app.listen(process.env.PORT ||  port, () => console.log(`Listening on port ${port}`))
 app.use(express.static('static'));
@@ -14,7 +14,7 @@ app.get('/home', (request, respone) => {
 
 app.get('/', (request, respone) => {
     respone.sendFile('signup.html', { root : './templates/' });
-    
+
 });
 
 app.get('/login', (request, respone) => {
